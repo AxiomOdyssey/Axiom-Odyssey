@@ -1,19 +1,19 @@
 {
     "components": [
         {
-            "cachedName": "LWJGL 2",
-            "cachedVersion": "2.9.4-nightly-20150209",
+            "cachedName": "LWJGL 3",
+            "cachedVersion": "3.4.2-20260602.093430-9",
             "cachedVolatile": true,
             "dependencyOnly": true,
-            "uid": "org.lwjgl",
-            "version": "2.9.4-nightly-20150209"
+            "uid": "org.lwjgl3",
+            "version": "3.4.2-20260602.093430-9"
         },
         {
-            "cachedName": "Minecraft",
+            "cachedName": "Minecraft with LWJGL3",
             "cachedRequires": [
                 {
-                    "suggests": "2.9.4-nightly-20150209",
-                    "uid": "org.lwjgl"
+                    "suggests": "3.4.2-20260602.093430-9",
+                    "uid": "org.lwjgl3"
                 }
             ],
             "cachedVersion": "1.7.10",
@@ -22,7 +22,12 @@
             "version": "1.7.10"
         },
         {
-            "cachedName": "Forge",
+            "cachedName": "LWJGL3ify Early Classpath",
+            "cachedVersion": "3.0.25",
+            "uid": "me.eigenraven.lwjgl3ify.forgepatches"
+        },
+        {
+            "cachedName": "Forge-LWJGL3",
             "cachedRequires": [
                 {
                     "equals": "1.7.10",
@@ -32,6 +37,11 @@
             "cachedVersion": "10.13.4.1614",
             "uid": "net.minecraftforge",
             "version": "10.13.4.1614"
+        },
+        {
+            "cachedName": "LWJGL3ify launch args",
+            "cachedVersion": "3.0.25",
+            "uid": "me.eigenraven.lwjgl3ify.launchargs"
         }
     ],
     "formatVersion": 1
