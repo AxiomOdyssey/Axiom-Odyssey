@@ -1,29 +1,84 @@
-# Модпак Minecraft 1.7.10
+<div align="center">
 
-Клиентская сборка Minecraft для **Prism Launcher**.
+# Axiom Odyssey
 
-## Характеристики
-- **Minecraft:** 1.7.10
-- **Загрузчик модов:** Forge 10.13.4.1614 (recommended)
-- **Java:** 8 (Prism скачивает автоматически)
+**Модпак Minecraft 1.7.10, работающий на современной Java (21–25).**
 
-## Установка
-1. Установи [Prism Launcher](https://prismlauncher.org/).
-2. Склонируй репозиторий в папку инстансов Prism:
-   `%APPDATA%\PrismLauncher\instances\` (Windows).
+Экспедиционно-технологическая сборка, вдохновлённая духом больших 1.7.10-паков —
+но со своим путём и своим кодом.
+
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.7.10-62B47A)](https://www.minecraft.net/)
+[![Forge](https://img.shields.io/badge/Forge-10.13.4.1614-1E2D42)](https://files.minecraftforge.net/)
+[![Java](https://img.shields.io/badge/Java-21--25-E76F00)](https://adoptium.net/)
+[![Launcher](https://img.shields.io/badge/Prism%20Launcher-8A2BE2)](https://prismlauncher.org/)
+
+</div>
+
+---
+
+## Что это
+
+Axiom Odyssey — собственный модпак для Minecraft **1.7.10**, который запускается не на
+устаревшей Java 8, а на **современной Java 21–25**. Это достигается стеком патчей
+уровня загрузчика (LWJGL3 + java-agent), поэтому пак работает на актуальной JVM без
+отдельной установки Java 8.
+
+> **Статус:** ранняя разработка (`v0.1.0-pre`). Сейчас в паке только рантайм-ядро для
+> запуска на новой Java — геймплейные моды добавляются на следующих этапах.
+
+## Установка (Prism Launcher)
+
+Нужен [Prism Launcher](https://prismlauncher.org/) и Java **21–25** (Prism умеет
+скачать её сам: Settings → Java → Download).
+
+**Импорт по ссылке (рекомендуется):**
+
+1. Prism → **Add Instance → Import from zip → вкладка со ссылкой (URL)**.
+2. Вставь:
    ```
-   git clone <URL-репозитория> "%APPDATA%\PrismLauncher\instances\MC-1.7.10-modpack"
+   https://codeload.github.com/AxiomOdyssey/Axiom-Odyssey/zip/refs/heads/Axiom-Odyssey
    ```
-3. В Prism нажми **Folder → Refresh** (или перезапусти лаунчер) — инстанс появится.
-4. Запусти инстанс. Prism докачает Forge, библиотеки, ассеты и Java 8.
+3. **OK** → Prism скачает и создаст инстанс **Axiom-Odyssey**.
+4. Запусти. Prism докачает Forge, библиотеки и ассеты.
 
-## Что версионируется
-- `mmc-pack.json`, `instance.cfg` — версия MC/Forge и настройки инстанса.
-- `minecraft/config/**` — конфиги модов.
-- `minecraft/mods/**` — моды (список формируется на следующем этапе).
+> Не используй ссылку из раздела *Releases* для импорта по URL — GitHub отдаёт её через
+> редирект на другой хост, который может быть недоступен в некоторых сетях. Ссылка
+> `codeload.github.com` выше отдаёт архив напрямую.
 
-Библиотеки, ассеты, версии и Java хранятся Prism централизованно и в репозиторий
-не входят (см. `.gitignore`).
+**Локально (альтернатива):** скачай zip из [Releases](../../releases) и
+**Add Instance → Import from zip → Local file**.
 
-## Список модов
-_Пока пусто — моды подбираются на следующем этапе._
+## Технический стек
+
+| Компонент | Версия | Роль |
+|---|---|---|
+| Minecraft | 1.7.10 | база |
+| Minecraft Forge | 10.13.4.1614 | загрузчик модов |
+| [lwjgl3ify](https://github.com/GTNewHorizons/lwjgl3ify) | 3.0.25 | LWJGL3 + патчи под современную Java |
+| [UniMixins](https://github.com/GTNewHorizons/UniMixins) | 0.3.1 | единый Mixin-стек |
+| Java | 21–25 | среда выполнения |
+
+## Структура репозитория
+
+- `mmc-pack.json`, `instance.cfg`, `patches/` — конфигурация инстанса Prism (версия
+  MC/Forge, LWJGL3-стек, launch-аргументы).
+- `libraries/` — jar'ы уровня загрузчика, не покрываемые Prism (java-agent lwjgl3ify).
+- `minecraft/mods/` — моды.
+- `minecraft/config/` — конфиги модов.
+- `CREDITS.md`, `THIRD_PARTY_LICENSES/` — авторство и лицензии сторонних модов.
+
+Сгенерированные и runtime-данные (saves, logs, crash-reports, кэш) в репозиторий не
+входят — см. `.gitignore`.
+
+## Лицензии и авторство
+
+Пак включает сторонние моды под их собственными лицензиями — см.
+[CREDITS.md](CREDITS.md) и [`THIRD_PARTY_LICENSES/`](THIRD_PARTY_LICENSES/).
+Отдельная благодарность команде **GTNewHorizons** за lwjgl3ify и UniMixins, без которых
+запуск 1.7.10 на современной Java был бы невозможен.
+
+## Ветки
+
+- `main` — разработка.
+- `Axiom-Odyssey` — публичная ветка для импорта по ссылке (держится в синхроне с `main`;
+  имя ветки задаёт имя инстанса в Prism).
