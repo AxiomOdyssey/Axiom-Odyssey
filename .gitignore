@@ -1,0 +1,21 @@
+# --- Prism хранит библиотеки/ассеты/версии/Java централизованно, вне инстанса ---
+
+# Генерируемое и runtime-данные
+minecraft/saves/
+minecraft/logs/
+minecraft/crash-reports/
+minecraft/screenshots/
+minecraft/usercache.json
+minecraft/usernamecache.json
+minecraft/hotbar.nbt
+minecraft/healthdata.dat
+*.log
+
+# Крупные ассеты (по желанию — раскомментируй, если не хочешь их в репо)
+# minecraft/resourcepacks/
+# minecraft/shaderpacks/
+# minecraft/texturepacks/
+
+# Кэш/временное
+minecraft/.mixin.out/
+minecraft/asm/
