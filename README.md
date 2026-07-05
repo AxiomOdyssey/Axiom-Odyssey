@@ -54,8 +54,8 @@ Axiom Odyssey — собственный модпак для Minecraft **1.7.10*
 |---|---|---|
 | Minecraft | 1.7.10 | база |
 | Minecraft Forge | 10.13.4.1614 | загрузчик модов |
-| [lwjgl3ify](https://github.com/GTNewHorizons/lwjgl3ify) | 3.0.25 | LWJGL3 + патчи под современную Java |
-| [UniMixins](https://github.com/GTNewHorizons/UniMixins) | 0.3.1 | единый Mixin-стек |
+| [lwjgl3ify](https://github.com/AxiomOdyssey/lwjgl3ify) | 3.0.25 | LWJGL3 + патчи под современную Java |
+| [UniMixins](https://github.com/AxiomOdyssey/UniMixins) | 0.3.1 | единый Mixin-стек |
 | Java | 21–25 | среда выполнения |
 
 ## Структура репозитория
@@ -72,10 +72,9 @@ Axiom Odyssey — собственный модпак для Minecraft **1.7.10*
 
 ## Лицензии и авторство
 
-Пак включает сторонние моды под их собственными лицензиями — см.
-[CREDITS.md](CREDITS.md) и [`THIRD_PARTY_LICENSES/`](THIRD_PARTY_LICENSES/).
-Отдельная благодарность команде **GTNewHorizons** за lwjgl3ify и UniMixins, без которых
-запуск 1.7.10 на современной Java был бы невозможен.
+Пак включает сторонние компоненты под их собственными лицензиями — авторство и
+полные тексты лицензий приведены в [CREDITS.md](CREDITS.md) и
+[`THIRD_PARTY_LICENSES/`](THIRD_PARTY_LICENSES/).
 
 ## Ветки
 
