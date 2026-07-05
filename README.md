@@ -1,16 +1,16 @@
 <div align="center">
 
-# Axiom Odyssey
+<img src="banner.svg" alt="Axiom Odyssey" width="920">
 
 **Модпак Minecraft 1.7.10, работающий на современной Java (21–25).**
 
 Экспедиционно-технологическая сборка, вдохновлённая духом больших 1.7.10-паков —
 но со своим путём и своим кодом.
 
-[![Minecraft](https://img.shields.io/badge/Minecraft-1.7.10-62B47A)](https://www.minecraft.net/)
-[![Forge](https://img.shields.io/badge/Forge-10.13.4.1614-1E2D42)](https://files.minecraftforge.net/)
-[![Java](https://img.shields.io/badge/Java-21--25-E76F00)](https://adoptium.net/)
-[![Launcher](https://img.shields.io/badge/Prism%20Launcher-8A2BE2)](https://prismlauncher.org/)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.7.10-43D6C4?style=flat-square)](https://www.minecraft.net/)
+[![Forge](https://img.shields.io/badge/Forge-10.13.4.1614-2B1A5A?style=flat-square)](https://files.minecraftforge.net/)
+[![Java](https://img.shields.io/badge/Java-21–25-7C5CFF?style=flat-square)](https://adoptium.net/)
+[![Launcher](https://img.shields.io/badge/Prism_Launcher-B7AEE8?style=flat-square)](https://prismlauncher.org/)
 
 </div>
 
